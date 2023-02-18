@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import BarChart from './Chart/BarChart';
+import Tree from './Tree/Tree';
+import data from './Tree/data';
 
 function App() {
 
@@ -14,18 +16,18 @@ function App() {
         <Link to='/chart' style={{ padding: 5 }}>
           Bar Chart Animation
         </Link>
-        {/* <Link to='/tree' style={{ padding: 5 }}>
+        <Link to='/tree' style={{ padding: 5 }}>
           Collapsible Tree Animation
         </Link>
-        <Link to='/sphere' style={{ padding: 5 }}>
+        {/* <Link to='/sphere' style={{ padding: 5 }}>
           Vertex Sphere
         </Link> */}
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/chart' element={<BarChart />} />
-        {/* <Route path='/tree' element={<Tree />} />
-        <Route path='/sphere' element={<Sphere />} /> */}
+        <Route path='/tree' element={<Tree data={data} width={600} height={500} />} />
+        {/* <Route path='/sphere' element={<Sphere />} /> */}
       </Routes>
     </Router>
   );
