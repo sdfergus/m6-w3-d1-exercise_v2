@@ -46,7 +46,7 @@ function Home() {
   return (
     <div style={{ padding: 20 }}>
       <h2>Home View</h2>
-      <p>Click Nav Menus to display animations</p>
+      <p>Click Nav Menus to display animations. <br></br> (Vertex Sphere - WIP)</p>
     </div>
   );
 }
